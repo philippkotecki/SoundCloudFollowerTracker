@@ -37,14 +37,6 @@ namespace SCFollowerCompare
             bool isInListAlready = false;
 
             // Check if the URL is already in the list
-            //foreach (var artist in artistList)
-            //{
-            //    if (artist.Url.Equals(ArtistUrlField.Text)) 
-            //    {
-            //        isInListAlready = true;
-            //        break;
-            //    }
-            //}
             if (artistList[index].Url.Equals(ArtistUrlField.Text) || ArtistUrlField.Text == "")
                 Navigation.PushAsync(new MainPage(artistList));
 
@@ -71,13 +63,6 @@ namespace SCFollowerCompare
 
             if (!isInListAlready)
             {
-                //if (ArtistNameField.Text != null &&
-                //    ArtistNameField.Text != "" &&
-                //    ArtistNameField.Text != artistList[index].Name)
-                //{
-                //    artistList[index].Name = ArtistNameField.Text;
-                //    dataHasChanged = true;
-                //}
 
                 if (ArtistUrlField.Text != null &&
                     ArtistUrlField.Text != "" &&
@@ -123,14 +108,5 @@ namespace SCFollowerCompare
                 await Task.Run(() => fs.WriteToJsonFile(aList));
             }
         }
-        //public event PropertyChangedEventHandler PropertyChanged;
-
-        //public void RaisePropertyChanged([CallerMemberName] string propertyName = "")
-        //{
-        //    if (!string.IsNullOrEmpty(propertyName))
-        //    {
-        //        this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        //    }
-        //}
     }
 }

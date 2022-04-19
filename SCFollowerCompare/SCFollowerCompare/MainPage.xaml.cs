@@ -9,11 +9,10 @@ using Xamarin.Forms;
 // TODO: OBSERVABLECOLLECTION DURCH LISTE REPLACEN
 // TODO: INVALID HTTP ADRESSE ERRORMESSAGE
 
+
 namespace SCFollowerCompare
 {
-    //[System.Xml.Serialization.XmlInclude(typeof(Artist))]
-    //[System.Xml.Serialization.XmlInclude(typeof(ObservableCollection<Artist>))]
-    public partial class MainPage : ContentPage, INotifyPropertyChanged
+    public partial class MainPage : ContentPage
     {
         public MainPage(ObservableCollection<Artist> _artistList)
         {
@@ -48,7 +47,7 @@ namespace SCFollowerCompare
             set
             {
                 artistList = value;
-                this.RaisePropertyChanged();
+                //this.RaisePropertyChanged();
             }
         }
 
@@ -62,43 +61,9 @@ namespace SCFollowerCompare
                 {
                     artist.Followers = Convert.ToInt32(accessHelper.getAndPrintHtmlData(artist.Url));
                 }
-                //artist.Followers = Convert.ToInt32(getAndPrintHtmlData(artist.Name, artist.Url));
-
             }
         }
 
-
-        //private string getAndPrintHtmlData(string artist, string url)
-        //{
-        //    HttpClient client = new HttpClient();
-        //    var responseBody = client.GetStringAsync(url).Result;
-
-        //    var htmlDocument = new HtmlDocument();
-        //    htmlDocument.LoadHtml(responseBody);
-
-        //    return findFollowersCount(responseBody);
-        //}
-
-        //private string findFollowersCount(string responseBody)
-        //{
-        //    // Find the area in the html document that holds the follower count of an artist
-            
-        //    string followerString = "followers_count\":";                                // string taken from HTML code
-        //    var index = responseBody.IndexOf(followerString) + followerString.Count();   // skip that string
-
-        //    var responseBodyCharArr = responseBody.ToCharArray();
-        //    List<char> followerCount = new List<char>();
-
-        //    // Add all chars (numbers) to an char array. Stop at "," where the follower count ends
-
-        //    for (int i = index; !responseBodyCharArr[i].Equals(','); i++)
-        //    {
-        //        followerCount.Add(responseBodyCharArr[i]);
-        //    }
-
-        //    string result = new string(followerCount.ToArray());
-        //    return result;
-        //}
 
         private ObservableCollection<Artist> CleanUpArtistList(ObservableCollection<Artist> artistList)
         {
@@ -131,7 +96,6 @@ namespace SCFollowerCompare
             var btn = (Button)sender;
             Artist art = new Artist("", "");
             int index = -1;
-            //string artistName = "";
 
 
             foreach (var artist in ArtistList)
@@ -142,19 +106,7 @@ namespace SCFollowerCompare
                     art.Url = artist.Url;
                     index = artistList.IndexOf(artist);
                 }
-                //if (artist.Name.Equals(btn.CommandParameter.ToString()))
-                //{
-                //    artistName = artist.Name;
-                //    index = ArtistList.IndexOf(artist);
-                //}
             }
-
-            //if (art.Name != null && art.Name != "")
-            //    Application.Current.Properties["ArtistName"] = art.Name;
-
-            //if (art.Url != null && art.Url != "")
-            //    Application.Current.Properties["ArtistUrl"] = art.Url;
-
 
             Navigation.PushAsync(new EditArtistPage(artistList, index));
         }
@@ -175,43 +127,19 @@ namespace SCFollowerCompare
             }
 
             serializeArtistList(artistList);
-
-            //this.CPage = new MainPage(artistList);
         }
 
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        //public event PropertyChangedEventHandler PropertyChanged;
 
-        public void RaisePropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            if (!string.IsNullOrEmpty(propertyName))
-            {
-                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
-
-        //protected override async void OnAppearing()
+        //public void RaisePropertyChanged([CallerMemberName] string propertyName = "")
         //{
-        //    base.OnAppearing();
-        //    if (artistList != null)
+        //    if (!string.IsNullOrEmpty(propertyName))
         //    {
-        //        FileService fs = new FileService();
-        //        //await Task.Run(() => fs.WriteToJsonFile(artistList));
-        //        await fs.WriteToJsonFile(artistList);
+        //        this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         //    }
         //}
 
-        //private async void CPage_Appearing(object sender, EventArgs e)
-        //{
-        //    ////if (File.Exists("loadData.xml"))
-        //    ////{
-        //    ////    string fileName = "loadData.xml";
-        //    ////    XmlManager.XmlDataReader(fileName);
-        //    ////}
-        //    FileService fs = new FileService();
-        //    //await Task.Run(() => fs.ReadFromJsonFile());
-        //    artistList = await fs.ReadFromJsonFile();
-        //}
 
         private async void CPage_Disappearing(object sender, EventArgs e)
         {

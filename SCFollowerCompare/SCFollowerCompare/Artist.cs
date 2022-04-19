@@ -16,28 +16,10 @@ namespace SCFollowerCompare
 
         public string Name { get; set; }
         public string Url { get; set; }
-        //public int Followers
-        //{
-        //    get => followers;
-        //    set
-        //    {
-        //        followers = value;
-        //        this.RaisePropertyChanged();
-        //    }
-        //}
+
 
         public int Followers { get; set; }
-        //public string FollowersText
-        //{
-        //    get => followers.ToString() + " followers";
-        //    set
-        //    {
-        //        followersText = followers.ToString() + " followers";
-        //        this.RaisePropertyChanged();
-        //    }
-        //}
 
-        //private int followers;
 
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {

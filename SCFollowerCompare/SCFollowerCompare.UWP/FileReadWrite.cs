@@ -13,7 +13,6 @@ namespace SCFollowerCompare.UWP
             try
             {
                 StorageFolder storageFolder = ApplicationData.Current.LocalFolder;
-                //StorageFile sampleFile = await storageFolder.GetFileAsync("PersonList.json");
                 StorageFile sampleFile = await storageFolder.GetFileAsync("ArtistList.json");
                 result = await Windows.Storage.FileIO.ReadTextAsync(sampleFile);
             }
@@ -31,7 +30,6 @@ namespace SCFollowerCompare.UWP
             try
             {
                 StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-                //StorageFile sampleFile = await localFolder.CreateFileAsync("PersonList.json", CreationCollisionOption.ReplaceExisting);
                 StorageFile sampleFile = await localFolder.CreateFileAsync("ArtistList.json", CreationCollisionOption.ReplaceExisting);
                 await FileIO.WriteTextAsync(sampleFile, text);
             }
