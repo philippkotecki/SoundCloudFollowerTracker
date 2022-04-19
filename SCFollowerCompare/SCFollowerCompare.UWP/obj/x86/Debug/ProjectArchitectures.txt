@@ -1,0 +1,1 @@
+C:\Users\kotec\source\repos\SCFollowerCompareOverall\SCFollowerCompare\SCFollowerCompare.UWP\SCFollowerCompare.UWP.csproj;x86

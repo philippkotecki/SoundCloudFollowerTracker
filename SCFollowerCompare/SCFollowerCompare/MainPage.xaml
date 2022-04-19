@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SCFollowerCompare.MainPage"
+             BackgroundColor="#1b2129"
+             x:Name="CPage"
+             Disappearing="CPage_Disappearing">
+
+    <StackLayout Margin="0, 50, 0, 60">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Track SoundCloud Followers" FontSize="18" HorizontalTextAlignment="Center" TextColor="White" Grid.Row="0"/>
+
+            <ListView x:Name="ArtistListView" BindingContext="{x:Reference Name=CPage}" ItemsSource="{Binding ArtistList}"
+                      HorizontalOptions="Center" VerticalScrollBarVisibility="Always"  MinimumHeightRequest="300" Grid.Row="1">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+
+                                <Grid HeightRequest="50"  Margin="30, 5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Column="0" Grid.Row="0" Text="{Binding Name}" x:Name="{Binding Name}" TextColor="White" FontSize="16" />
+                                    <Label Grid.Column="0" Grid.Row="1" Text="{Binding Followers, StringFormat='{0:F0} followers'}" TextColor="White" FontSize="16" />
+
+                                    <Button Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Text="Edit" TextColor="White" FontSize="13" Clicked="Edit_ArtistInfo" CommandParameter="{Binding Name}"/>
+                                    <Button Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Text="X" TextColor="White" FontSize="13" Clicked="Delete_Artist" CommandParameter="{Binding Name}"/>
+
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="+" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Clicked="Add_Artist" TextColor="White" WidthRequest="50" Grid.Row="2"/>
+
+            <Button Text="Refresh" Clicked="Refresh_List" BackgroundColor="Gray" TextColor="White" HorizontalOptions="Center" VerticalOptions="End" Grid.Row="3"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

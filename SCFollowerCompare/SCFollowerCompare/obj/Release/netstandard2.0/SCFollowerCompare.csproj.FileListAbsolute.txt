@@ -1,0 +1,15 @@
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\bin\Release\netstandard2.0\SCFollowerCompare.deps.json
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\bin\Release\netstandard2.0\SCFollowerCompare.dll
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\bin\Release\netstandard2.0\ref\SCFollowerCompare.dll
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\bin\Release\netstandard2.0\SCFollowerCompare.pdb
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\obj\Release\netstandard2.0\SCFollowerCompare.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\obj\Release\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\obj\Release\netstandard2.0\SCFollowerCompare.AssemblyInfoInputs.cache
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\obj\Release\netstandard2.0\SCFollowerCompare.AssemblyInfo.cs
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\obj\Release\netstandard2.0\SCFollowerCompare.csproj.CoreCompileInputs.cache
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\obj\Release\netstandard2.0\SCFollowerCompare.dll
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\obj\Release\netstandard2.0\ref\SCFollowerCompare.dll
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\obj\Release\netstandard2.0\SCFollowerCompare.pdb
+C:\Users\kotec\source\repos\SCFollowerCompare\SCFollowerCompare\SCFollowerCompare\obj\Release\netstandard2.0\SCFollowerCompare.csproj.AssemblyReference.cache

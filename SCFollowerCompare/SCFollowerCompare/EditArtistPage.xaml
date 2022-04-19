@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SCFollowerCompare.EditArtistPage"
+             BackgroundColor="#1b2129"
+             x:Name="EAPage">
+    <ContentPage.Content>
+        <StackLayout Margin="0, 50, 0, 60">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <!--<Label Text="Artist name" TextColor="White" FontSize="20"/>
+                <Entry x:Name="ArtistNameField" BindingContext="{x:Reference Name=EAPage}" BackgroundColor="#13171c" TextColor="White"/>-->
+
+
+                <Label TextColor="White" Text="SoundCloud Link" FontSize="20" Margin="0, 10" Grid.Row="0"/>
+                <Entry x:Name="ArtistUrlField" BindingContext="{x:Reference Name=EAPage}" BackgroundColor="#13171c" TextColor="White" Grid.Row="1"/>
+
+                <Label x:Name="ErrorMessage" BindingContext="{x:Reference Name=EAPage}" TextColor="Red" HorizontalOptions="CenterAndExpand" IsVisible="false" Grid.Row="2"/>
+
+                <Button Text="Enter Data" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Clicked="Enter_Data" TextColor="White" Grid.Row="4"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

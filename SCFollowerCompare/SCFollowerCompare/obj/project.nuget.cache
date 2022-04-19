@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "ykRN5azD0D8I6oUAembiyagG+kV3rBogZVWj+GO2o6kAvqXut0WPfUrrWJDM3mGHiz5qjngRVRJaVKaL9kmY1A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kotec\\source\\repos\\SCFollowerCompareOverall\\SCFollowerCompare\\SCFollowerCompare\\SCFollowerCompare.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kotec\\.nuget\\packages\\htmlagilitypack\\1.11.42\\htmlagilitypack.1.11.42.nupkg.sha512",
+    "C:\\Users\\kotec\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\kotec\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\kotec\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\kotec\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}
