@@ -65,21 +65,6 @@ namespace SCFollowerCompare
                     this.ErrorMessage.IsVisible = true;
                     break;
                 }
-                //if (artistList[i].Url.Equals(ArtistUrlField.Text) && artistList[i].Equals(index))
-                //{
-                //    Navigation.PushAsync(new MainPage(artistList));
-                //}
-
-                //if (artistList[i].Url.Equals(ArtistUrlField.Text) && artistList[i].Equals(index))
-                //{
-                //    if (artistList[i].Equals(index))
-                //        goto GoOut;
-
-                //    isInListAlready = true;
-                //    ErrorMessage = "This URL is being observed by you already. Enter another URL.";
-                //    this.RaisePropertyChanged(nameof(ErrorMessage));
-                //    break;
-                //}
             }
 
 
