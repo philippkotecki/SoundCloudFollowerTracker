@@ -80,12 +80,12 @@ namespace SCFollowerCompare
                     artistList[index] = newArtist;
                 }
 
-                //// Clean up list by removing all empty entries
-                //for (int i = 0; i < artistList.Count; i++)
-                //{
-                //    if (artistList[i].Url.Equals(null) || artistList[i].Url.Equals(""))
-                //        artistList.Remove(artistList[i]);
-                //}
+                // Clean up list by removing all empty entries
+                for (int i = 0; i < artistList.Count; i++)
+                {
+                    if (artistList[i].Url.Equals(null) || artistList[i].Url.Equals(""))
+                        artistList.Remove(artistList[i]);
+                }
 
                 serializeArtistList(artistList);
 

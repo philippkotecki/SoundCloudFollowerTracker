@@ -33,7 +33,7 @@ namespace SCFollowerCompare
                 artistList = new ObservableCollection<Artist>();
             }
 
-            //CleanUpArtistList(artistList);
+            CleanUpArtistList(artistList);
         }
 
         private const string prevString = "followers_count\":";
@@ -79,7 +79,7 @@ namespace SCFollowerCompare
 
         private void Add_Artist(object sender, EventArgs e)
         {
-            //CleanUpArtistList(artistList);
+            CleanUpArtistList(artistList);
             artistList.Add(new Artist("", ""));
             Navigation.PushAsync(new EditArtistPage(artistList, artistList.Count - 1));
         }
