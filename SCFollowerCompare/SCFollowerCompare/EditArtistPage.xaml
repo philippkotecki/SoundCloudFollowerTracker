@@ -15,9 +15,6 @@
                     <RowDefinition Height="1*"/>
                 </Grid.RowDefinitions>
 
-                <!--<Label Text="Artist name" TextColor="White" FontSize="20"/>
-                <Entry x:Name="ArtistNameField" BindingContext="{x:Reference Name=EAPage}" BackgroundColor="#13171c" TextColor="White"/>-->
-
 
                 <Label TextColor="White" Text="SoundCloud Link" FontSize="20" Margin="0, 10" Grid.Row="0"/>
                 <Entry x:Name="ArtistUrlField" BindingContext="{x:Reference Name=EAPage}" BackgroundColor="#13171c" TextColor="White" Grid.Row="1"/>

@@ -78,26 +78,22 @@ namespace SCFollowerCompare
                     HtmlAccess accessHelper = new HtmlAccess(prevString, endString);
                     Artist newArtist = new Artist(accessHelper.getAndPrintHtmlData(ArtistUrlField.Text), ArtistUrlField.Text);
                     artistList[index] = newArtist;
-                    //artistList.Add(newArtist);
                 }
 
-                // Clean up list by removing all empty entries
-                for (int i = 0; i < artistList.Count; i++)
-                {
-                    if (artistList[i].Url.Equals(null) || artistList[i].Url.Equals(""))
-                        artistList.Remove(artistList[i]);
-                }
+                //// Clean up list by removing all empty entries
+                //for (int i = 0; i < artistList.Count; i++)
+                //{
+                //    if (artistList[i].Url.Equals(null) || artistList[i].Url.Equals(""))
+                //        artistList.Remove(artistList[i]);
+                //}
 
                 serializeArtistList(artistList);
 
                 Navigation.PushAsync(new MainPage(artistList));
             }
+
         Jump:
-
-
-            // Dummy method to get the goto jump statement working
             serializeArtistList(artistList);
-            Console.WriteLine();
         }
 
         private async void serializeArtistList(ObservableCollection<Artist> aList)

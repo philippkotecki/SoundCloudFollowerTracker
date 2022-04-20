@@ -23,8 +23,8 @@
 	.section	.rodata.env.str.1,"aMS",%progbits,1
 	.type	.L.env.str.1, %object
 .L.env.str.1:
-	.asciz	"com.companyname.scfollowercompare"
-	.size	.L.env.str.1, 34
+	.asciz	"com.tekkisoft.scfollowertracker"
+	.size	.L.env.str.1, 32
 	.section	.data.application_config,"aw",%progbits
 	.type	application_config, %object
 	.p2align	2
@@ -92,7 +92,7 @@ mono_aot_mode_name:
 	.section	.rodata.env.str.8,"aMS",%progbits,1
 	.type	.L.env.str.8, %object
 .L.env.str.8:
-	.asciz	"f87a4b6c-a788-4b73-86c2-821b57043692"
+	.asciz	"31375aaa-0417-4071-a2a4-e3c274e8f0cb"
 	.size	.L.env.str.8, 37
 	.section	.rodata.env.str.9,"aMS",%progbits,1
 	.type	.L.env.str.9, %object

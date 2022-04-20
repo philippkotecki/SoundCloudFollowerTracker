@@ -5,6 +5,7 @@ public class MonoPackageManager_Resources {
 		"SCFollowerCompare.Android.dll",
 		"FormsViewGroup.dll",
 		"HtmlAgilityPack.dll",
+		"Newtonsoft.Json.dll",
 		"SCFollowerCompare.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",

@@ -3,8 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SCFollowerCompare.MainPage"
              BackgroundColor="#1b2129"
-             x:Name="CPage"
-             Disappearing="CPage_Disappearing">
+             x:Name="CPage">
 
     <StackLayout Margin="0, 50, 0, 60">
         <Grid>
@@ -50,7 +49,7 @@
 
             <Button Text="+" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Clicked="Add_Artist" TextColor="White" WidthRequest="50" Grid.Row="2"/>
 
-            <Button Text="Refresh" Clicked="Refresh_List" BackgroundColor="Gray" TextColor="White" HorizontalOptions="Center" VerticalOptions="End" Grid.Row="3"/>
+            <Button Text="Refresh" Clicked="Refresh_List" TextColor="White" HorizontalOptions="Center" VerticalOptions="End" Grid.Row="3"/>
         </Grid>
     </StackLayout>
 

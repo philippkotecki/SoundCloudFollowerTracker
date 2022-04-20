@@ -6,8 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-// TODO: OBSERVABLECOLLECTION DURCH LISTE REPLACEN
-// TODO: INVALID HTTP ADRESSE ERRORMESSAGE
+// TODO: INVALID HTTP ADRESS ERRORMESSAGEs
 
 
 namespace SCFollowerCompare
@@ -34,7 +33,7 @@ namespace SCFollowerCompare
                 artistList = new ObservableCollection<Artist>();
             }
 
-            CleanUpArtistList(artistList);
+            //CleanUpArtistList(artistList);
         }
 
         private const string prevString = "followers_count\":";
@@ -64,7 +63,7 @@ namespace SCFollowerCompare
             }
         }
 
-
+        // Helper method to remove empty artist entries
         private ObservableCollection<Artist> CleanUpArtistList(ObservableCollection<Artist> artistList)
         {
             // Clean up list by removing all empty entries
@@ -80,7 +79,7 @@ namespace SCFollowerCompare
 
         private void Add_Artist(object sender, EventArgs e)
         {
-            CleanUpArtistList(artistList);
+            //CleanUpArtistList(artistList);
             artistList.Add(new Artist("", ""));
             Navigation.PushAsync(new EditArtistPage(artistList, artistList.Count - 1));
         }
@@ -130,32 +129,7 @@ namespace SCFollowerCompare
         }
 
 
-        //public event PropertyChangedEventHandler PropertyChanged;
-
-        //public void RaisePropertyChanged([CallerMemberName] string propertyName = "")
-        //{
-        //    if (!string.IsNullOrEmpty(propertyName))
-        //    {
-        //        this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        //    }
-        //}
-
-
-        private async void CPage_Disappearing(object sender, EventArgs e)
-        {
-            //if (artistList != null)
-            //{
-            //    string fileName = @"C:/Users/kotec/Desktop/TestOrdner/loadData.xml";
-            //    XmlManager.XmlDataWriter(artistList, fileName);
-            //}
-            //if (artistList != null)
-            //{
-            //    FileService fs = new FileService();
-            //    await Task.Run(() => fs.WriteToJsonFile(artistList));
-            //}
-            serializeArtistList(artistList);
-        }
-
+        // Save current artistList in json file
         private async void serializeArtistList(ObservableCollection<Artist> aList)
         {
             if (aList != null)
@@ -164,5 +138,12 @@ namespace SCFollowerCompare
                 await Task.Run(() => fs.WriteToJsonFile(aList));
             }
         }
+
+
+
+        //private async void CPage_Disappearing(object sender, EventArgs e)
+        //{
+        //    serializeArtistList(artistList);
+        //}
     }
 }
